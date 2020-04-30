@@ -1,31 +1,69 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+import '../components/search.css';
+
+const Box = styled.div`
+    box-shadow: 1px 1px 3px 1px lightgrey;
+    border-radius: 4px;
+    padding: 2%;
+    margin: 2%;
+    text-align: center;
+`
 
 function Search() {
     const [gender, setGender] = useState('Select');
     const [education, setEducation] = useState();
     console.log(gender)
     return (
-        <div>
+        <Box>
+            <center>
+                <form>
+                    <div className="container">
+                        <div className="row">
+                            <select required onChange={e => { setEducation(e.target.value) }} className="col-lg-4 col-xs-11 col-md-4 col-sm-12">
+                                <option selected>Select highest education</option>
+                                <option value="8th pass"> 8th pass </option>
+                                <option value="10th pass"> 10th pass </option>
+                                <option value="12th pass"> 12th pass </option>
+                                <option value="Graduate"> Graduate </option>
+                                <option value="Post Graduate"> Post Graduate </option>
+                                <option value="Ph. D."> Ph. D. </option>
+                            </select>
+                            <select onChange={e => { setGender(e.target.value) }} className="col-lg-3 col-xs-11 col-md-3 col-sm-12">
+                                <option selected>Select gender</option>
+                                <option value="Female"> Female </option>
+                                <option value="Male"> Male </option>
+                                <option value="Transgender"> Transgender </option>
+                                <option value="Other"> Other </option>
+                            </select>
+                            <select onChange={e => { setGender(e.target.value) }} className="col-lg-4 col-xs-11 col-md-4 col-sm-12">
+                                <option selected>Select opportunity type</option>
+                                <option value="Internship"> Internship </option>
+                                <option value="Open source program"> Open source program </option>
+                                <option value="Community event"> Community event </option>
+                                <option value="Hackathon"> Hackathon </option>
+                            </select>
+                            <select onChange={e => { setGender(e.target.value) }} className="col-lg-4 col-xs-11 col-md-4 col-sm-12">
+                                <option selected>Select Country</option>
+                                <option value="India"> India </option>
+                                <option value="USA"> USA </option>
+                                <option value="UK"> UK </option>
+                                <option value="Singapore"> All </option>
+                            </select>
+                            <select onChange={e => { setGender(e.target.value) }} className="col-lg-3 col-xs-11 col-md-3 col-sm-12">
+                                <option selected>Select city</option>
+                                <option value="Delhi"> Delhi </option>
+                                <option value="London"> London </option>
+                                <option value="Los Angeles"> Los Angeles </option>
+                                <option value="All"> All </option>
+                            </select>
+                        </div>
+                    </div>
+                    <input id="findopp" type="submit" value="Find opportunities" />
+                </form>
 
-            <form>
-                Highest educational qualification: &emsp;
-<select onChange={e => { setEducation(e.target.value) }}>
-                    <option value="10th pass"> 10th pass </option>
-                    <option value="12th pass"> 12th pass </option>
-                    <option value="Graduate"> Graduate </option>
-                    <option value="Post Graduate"> Post Graduate </option>
-                    <option value="Ph. D."> Ph. D. </option>
-                </select><br />
-                Gender: &emsp;
-<select onChange={e => { setGender(e.target.value) }}>
-                    <option value="Female"> Female </option>
-                    <option value="Male"> Male </option>
-                    <option value="Transgender"> Transgender </option>
-                    <option value="Other"> Other </option>
-                </select>
-            </form>
-            <button> Find opportunities </button>
-        </div>
+            </center>
+        </Box>
     )
 }
 

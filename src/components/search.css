@@ -1,0 +1,28 @@
+select{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 0.5%;
+    width: 100%;
+    margin: 1%;
+}
+select:hover{
+    border: 1.2px solid rgb(4, 4, 97);
+}
+#findopp{
+    padding: 1%;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background: none;
+    margin-top: 5%;
+}
+#findopp:hover{
+    background: rgb(4, 4, 97);
+    transition-duration: 0.5s;
+    color: white;
+    border: rgb(4, 4, 97);
+}
+/* option{
+    padding: 0.5%;
+    border: 5px solid lightgray;
+    margin: 1%;
+} */
