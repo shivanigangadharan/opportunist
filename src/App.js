@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Homepage from './pages/homepage';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import SearchResults from './pages/search-results';
+import Navbar from './components/navbar';
 
 const Main = styled.div`
   font-family: 'Poppins', sans-serif;

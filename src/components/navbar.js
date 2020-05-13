@@ -1,33 +1,67 @@
-import React from 'react';
+import React, { useState, useLayoutEffect, useEffect } from 'react';
 import styled from 'styled-components';
-import flowers from '../assets/background/flowers.jpg';
+// import './navbar.css';
+// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Main = styled.div`
-`
 const Nav = styled.nav`
-    background-image: url('https://images.unsplash.com/photo-1530533718754-001d2668365a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
-    border-radius: 0px;
-    background-size: cover;
-    background-position: center;
-    `
+background: #2A2829;
+transition: top 0.5s;
+position: fixed;
+width: 100%;
+padding: 1.5%;
+`
+const Head = styled.a`
+font-size: 250%;
+font-weight: 600;
+color: white;
+:hover{
+    color: #4d94ff;
+}
+`
+
+const NavRight = styled.div`
+    color: white !important;
+    float: right;
+    font-size: 150%;
+`
+
 function Navbar() {
+    useEffect(() => {
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                //showNav
+                setNavState('0px');
+                prevScrollpos = currentScrollPos;
+
+            }
+            else {
+                //hideNAV
+                setNavState('-100px');
+                prevScrollpos = currentScrollPos;
+
+            }
+        }
+    })
+
+    const [navState, setNavState] = useState('0px');
+
     return (
-        <Main>
-            <Nav className="navbar navbar-expand-lg">
-                <div className="container-fluid">
-                    <div className="navbar-header">
-                        <a className="navbar-brand" href="#">Opportunist</a>
-                    </div>
-                    <ul className="nav navbar-nav">
-                        <li className="active"><a href="#">Home</a></li>
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Send Feedback</a></li>
-                    </ul>
-                </div>
-            </Nav>
-        </Main>
+        <Nav id="navbar" style={{ 'top': navState }}>
+
+
+            <Head className="navbar-brand" href="/">OPPORTUNIST</Head>
+
+            <NavRight className="justify-content-end" id="navbarNav">
+                <Link style={{ 'color': 'white' }} to="/about">  About </Link>
+                <Link style={{ 'color': 'white' }} to="/">Contact</Link>
+                <Link style={{ 'color': 'white' }} to="/"> Feedback </Link>
+
+            </NavRight >
+        </Nav >
     )
 }
-
 export default Navbar;
+

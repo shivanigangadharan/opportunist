@@ -7,7 +7,7 @@ const Box = styled.div`
     box-shadow: 1px 1px 3px 1px lightgrey;
     border-radius: 4px;
     padding: 2%;
-    margin: 2%;
+    padding-top: 20vh;
     text-align: center;
     background: ghostwhite;
 `
