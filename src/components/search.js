@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import '../components/search.css';
+import { Link } from 'react-router-dom';
 
 const Box = styled.div`
     box-shadow: 1px 1px 3px 1px lightgrey;
@@ -8,6 +9,7 @@ const Box = styled.div`
     padding: 2%;
     margin: 2%;
     text-align: center;
+    background: ghostwhite;
 `
 
 function Search() {
@@ -59,7 +61,9 @@ function Search() {
                             </select>
                         </div>
                     </div>
-                    <input id="findopp" type="submit" value="Find opportunities" />
+                    <Link to="/search-results">
+                        <input id="findopp" type="submit" value="Find opportunities" />
+                    </Link>
                 </form>
 
             </center>
