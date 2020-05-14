@@ -5,7 +5,7 @@ import Navbar from '../components/navbar';
 
 const Main = styled.div`
     background: ghostwhite;
-    padding-top: 10%;
+    padding-top: 15%;
     padding-bottom: 5%;
 `
 
@@ -16,9 +16,9 @@ function SearchResults() {
 
             <center>
 
-                <Card />
-                <Card />
-                <Card />
+                <Card type="OPEN SOURCE PROGRAM" />
+                <Card type="INTERNSHIP" />
+                <Card type="COMMUNITY EVENT" />
             </center>
         </Main>
     )

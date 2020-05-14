@@ -10,19 +10,34 @@ const Box = styled.div`
     padding-top: 20vh;
     text-align: center;
     background: ghostwhite;
+    @media screen and (max-width: 991px){
+        padding-bottom: 4%;
+    }
+    @media screen and (max-width: 700px){
+        padding-bottom: 6%;
+    }
 `
+const Select = styled.select`
+    width: 30%;
+    @media screen and (max-width: 991px){
+        width: 40%;
+    }
+    @media screen and (max-width: 700px){
+        width: 80%;
+    }
+    `
+
 
 function Search() {
     const [gender, setGender] = useState('Select');
     const [education, setEducation] = useState();
-    console.log(gender)
     return (
         <Box>
             <center>
                 <form>
                     <div className="container">
                         <div className="row">
-                            <select required onChange={e => { setEducation(e.target.value) }} className="col-lg-4 col-xs-11 col-md-4 col-sm-12">
+                            <Select required onChange={e => { setEducation(e.target.value) }}>
                                 <option selected>Select highest education</option>
                                 <option value="8th pass"> 8th pass </option>
                                 <option value="10th pass"> 10th pass </option>
@@ -30,35 +45,35 @@ function Search() {
                                 <option value="Graduate"> Graduate </option>
                                 <option value="Post Graduate"> Post Graduate </option>
                                 <option value="Ph. D."> Ph. D. </option>
-                            </select>
-                            <select onChange={e => { setGender(e.target.value) }} className="col-lg-3 col-xs-11 col-md-3 col-sm-12">
+                            </Select>
+                            <Select onChange={e => { setGender(e.target.value) }}>
                                 <option selected>Select gender</option>
                                 <option value="Female"> Female </option>
                                 <option value="Male"> Male </option>
                                 <option value="Transgender"> Transgender </option>
                                 <option value="Other"> Other </option>
-                            </select>
-                            <select onChange={e => { setGender(e.target.value) }} className="col-lg-4 col-xs-11 col-md-4 col-sm-12">
+                            </Select>
+                            <Select onChange={e => { setGender(e.target.value) }}>
                                 <option selected>Select opportunity type</option>
                                 <option value="Internship"> Internship </option>
                                 <option value="Open source program"> Open source program </option>
                                 <option value="Community event"> Community event </option>
                                 <option value="Hackathon"> Hackathon </option>
-                            </select>
-                            <select onChange={e => { setGender(e.target.value) }} className="col-lg-4 col-xs-11 col-md-4 col-sm-12">
+                            </Select>
+                            <Select onChange={e => { setGender(e.target.value) }}>
                                 <option selected>Select Country</option>
                                 <option value="India"> India </option>
                                 <option value="USA"> USA </option>
                                 <option value="UK"> UK </option>
                                 <option value="Singapore"> All </option>
-                            </select>
-                            <select onChange={e => { setGender(e.target.value) }} className="col-lg-3 col-xs-11 col-md-3 col-sm-12">
+                            </Select>
+                            <Select onChange={e => { setGender(e.target.value) }}>
                                 <option selected>Select city</option>
                                 <option value="Delhi"> Delhi </option>
                                 <option value="London"> London </option>
                                 <option value="Los Angeles"> Los Angeles </option>
                                 <option value="All"> All </option>
-                            </select>
+                            </Select>
                         </div>
                     </div>
                     <Link to="/search-results">

@@ -19,7 +19,13 @@ color: white;
     color: #4d94ff;
 }
 `
-
+const Links = styled(Link)`
+color: white !important;
+text-decoration:none !important;
+:hover{
+    color: skyblue !important;
+}
+`
 const NavRight = styled.div`
     color: white !important;
     float: right;
@@ -55,9 +61,9 @@ function Navbar() {
             <Head className="navbar-brand" href="/">OPPORTUNIST</Head>
 
             <NavRight className="justify-content-end" id="navbarNav">
-                <Link style={{ 'color': 'white' }} to="/about">  About </Link>
-                <Link style={{ 'color': 'white' }} to="/">Contact</Link>
-                <Link style={{ 'color': 'white' }} to="/"> Feedback </Link>
+                <Links to="/">  About </Links>
+                <Links to="/">Contact</Links>
+                <Links to="/"> Feedback </Links>
 
             </NavRight >
         </Nav >
