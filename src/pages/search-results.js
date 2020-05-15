@@ -1,18 +1,19 @@
 import React from 'react';
 import Card from '../components/card';
 import styled from 'styled-components';
-import Navbar from '../components/navbar';
 
 const Main = styled.div`
     background: ghostwhite;
-    padding-top: 15%;
+    padding-top: 10%;
     padding-bottom: 5%;
+    @media screen and (max-width: 650px){
+        padding-top: 15%;
+    }
 `
 
 function SearchResults() {
     return (
         <Main>
-            <Navbar />
 
             <center>
 
