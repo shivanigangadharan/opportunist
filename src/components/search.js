@@ -4,12 +4,9 @@ import '../components/search.css';
 import { Link } from 'react-router-dom';
 
 const Box = styled.div`
-    box-shadow: 1px 1px 3px 1px lightgrey;
     border-radius: 4px;
-    padding: 2%;
-    padding-top: 20vh;
+    padding-top: 5vh;
     text-align: center;
-    background: ghostwhite;
     @media screen and (max-width: 991px){
         padding-bottom: 4%;
     }
@@ -19,6 +16,7 @@ const Box = styled.div`
 `
 const Select = styled.select`
     width: 30%;
+    outline: none;
     @media screen and (max-width: 991px){
         width: 40%;
     }

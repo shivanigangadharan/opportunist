@@ -16,7 +16,8 @@ font-size: 250%;
 font-weight: 600;
 color: white;
 :hover{
-    color: #4d94ff;
+    color: skyblue !important;
+    transition-duration:0.5s;
 }
 `
 const Links = styled(Link)`
@@ -24,6 +25,7 @@ color: white !important;
 text-decoration:none !important;
 :hover{
     color: skyblue !important;
+    transition-duration:0.5s;
 }
 `
 const NavRight = styled.div`
@@ -61,10 +63,10 @@ function Navbar() {
             <Head className="navbar-brand" href="/">OPPORTUNIST</Head>
 
             <NavRight className="justify-content-end" id="navbarNav">
+                <Links to="/suggest"> Suggest </Links>
                 <Links to="/">  About </Links>
                 <Links to="/">Contact</Links>
                 <Links to="/"> Feedback </Links>
-                <Links to="/suggest"> Suggest </Links>
             </NavRight >
         </Nav >
     )
