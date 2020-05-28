@@ -7,6 +7,7 @@ const Main = styled.div`
     margin-top: 22vh;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 10vh;
     `
 const Select = styled.select`
     border: 1px solid lightgray;
