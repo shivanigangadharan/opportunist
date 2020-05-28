@@ -64,7 +64,7 @@ function Navbar() {
                 <Links to="/">  About </Links>
                 <Links to="/">Contact</Links>
                 <Links to="/"> Feedback </Links>
-                <Links to="/suggest"> Suggest opportunity </Links>
+                <Links to="/suggest"> Suggest </Links>
             </NavRight >
         </Nav >
     )

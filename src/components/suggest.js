@@ -13,9 +13,12 @@ const Select = styled.select`
     border-radius: 4px;
     padding: 0.5%;
     width: 35%;
-    margin: 1%;
+    margin: 1.5%;
     @media screen and (max-width: 830px){
-        width: 70%;
+        width: 75%;
+    }
+    @media screen and (max-width: 700px){
+        width: 95%;
     }
 `
 const Input = styled.input`
@@ -24,12 +27,32 @@ const Input = styled.input`
     padding-bottom: 1%;
     font-size: 120%;
     width: 35%;
-    margin: 1%;
+    margin: 1.5%;
     outline: none;
     color: rgb(4, 4, 97);
     @media screen and (max-width: 830px){
-        width: 70%;
+        width: 75%;
     }
+    @media screen and (max-width: 700px){
+        width: 95%;
+    }
+`
+const Submit = styled.input`
+padding: 1%;
+border: 1px solid grey;
+border-radius: 4px;
+background: none;
+margin-top: 3%;
+margin-bottom: 2%;
+:hover{
+    background: rgb(4, 4, 97);
+    transition-duration: 0.5s;
+    color: white;
+    border: rgb(4, 4, 97);
+}
+`
+const Text = styled.text`
+    font-size: 10px;
 `
 function Suggest() {
     return (
@@ -37,7 +60,7 @@ function Suggest() {
             <Main>
                 <h2> Help others by submitting more opportunities that you're aware of. </h2>
                 <h5> Fill in this very small form below so that we can update and help more people avail such benefits. Please make sure that the opportunity you're submitting isn't already listed on this website. </h5>
-                <form>
+                <center> <form>
                     <Select>
                         <option selected>Select opportunity type</option>
                         <option value="Internship"> Internship </option>
@@ -53,11 +76,16 @@ function Suggest() {
                         <option value="Other"> Other </option>
                         <option value="All genders are welcome"> All genders are welcome </option>
                     </Select>
-                    <Input type="text" placeholder="Enter name of the opportunity" />
-                    <Input type="text" placeholder="Add link to its official site" />
+                    <Input type="text" placeholder="Enter name of the opportunity" required />
+                    <Input type="text" placeholder="Add link to its official site" required />
+                    <Input type="email" placeholder="Enter your email address*" required />
+                    <Input type="text" placeholder="Anything else that you'd like us to know?" /><br /><br />
+                    <Text size="10px" >*Note: Your email address is just for us to contact you in case of a query. It will be secure and we assure you of not sending spam.</Text>
 
+                    <br />
+                    <Submit type="submit" value="Submit Opportunity" />
                 </form>
-
+                </center>
             </Main>
         </div>
     )
