@@ -1,7 +1,7 @@
-import React, { useState, useLayoutEffect, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 // import './navbar.css';
-// import { Link } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
@@ -34,7 +34,7 @@ const NavRight = styled.div`
     font-size: 150%;
 `
 
-function Navbar() {
+function MyNavbar() {
     useEffect(() => {
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
@@ -68,8 +68,11 @@ function Navbar() {
                 <Links to="/">Contact</Links>
                 <Links to="/"> Feedback </Links>
             </NavRight >
+
+
+
         </Nav >
     )
 }
-export default Navbar;
+export default MyNavbar;
 

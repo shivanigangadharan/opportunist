@@ -17,6 +17,7 @@ const Box = styled.div`
 const Select = styled.select`
     width: 30%;
     outline: none;
+    background: white !important;
     @media screen and (max-width: 991px){
         width: 40%;
     }

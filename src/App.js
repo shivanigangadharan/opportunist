@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Homepage from './pages/homepage';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import SearchResults from './pages/search-results';
-import Navbar from './components/navbar';
+import MyNavbar from './components/navbar';
 import Suggest from './components/suggest';
 import Search from './components/search';
+import Feedback from './components/feedback/feedback';
 
 const Main = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -16,7 +17,8 @@ function App() {
   return (
     <Main>
       <BrowserRouter>
-        <Navbar />
+        <MyNavbar />
+        <Feedback />
         <Switch>
           <Route path="/" exact component={Homepage} />
           <Route path="/search" component={Search} />

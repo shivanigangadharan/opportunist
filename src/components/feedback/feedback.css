@@ -1,0 +1,33 @@
+.open{
+    background: white;
+    padding: 15px;
+    transition-duration: 1s;
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    box-shadow: 0px 0px 40px 1px rgba(128, 128, 128, 0.685);
+}
+@keyframes fadein{
+    from{ opacity: 0 }
+    to{opacity: 1}
+}
+
+@keyframes fadeout{
+    from{ opacity: 1 }
+    to{opacity: 0}
+}
+@keyframes drop{
+    from{ height: 0px }
+    to{height: 100px}
+}
+.close{
+    display: none;
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+}
+.hide{
+    height: 0px;
+}
+.drop{
+    animation-name: drop;
+    animation-duration: 0.5s;
+}

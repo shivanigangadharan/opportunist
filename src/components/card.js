@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { stringLiteralTypeAnnotation } from '@babel/types';
 
 const Main = styled.div`
     background: white;
@@ -68,7 +67,7 @@ function Card(props) {
                 <p><b> Target audience: </b> Females, Transgender, other under-represented groups</p>
                 <p><b> Stipend: </b> $5500 </p>
                 <p><b> Application period: </b> 03-03-2020 to 07-04-2020 </p>
-                <p><b> Link: </b> <a target="_blank" href="https://www.outreachy.org/"> https://www.outreachy.org/ </a></p>
+                <p><b> Link: </b> <a target="_blank" rel="noopener noreferrer" href="https://www.outreachy.org/"> https://www.outreachy.org/ </a></p>
             </Content>
 
         </Main>
