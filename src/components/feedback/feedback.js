@@ -68,14 +68,17 @@ const Send = styled.input`
 function Feedback() {
     const [show, setShow] = useState('close');
     const [drop, setDrop] = useState('hide');
+    const [buttonText, setButtonText] = useState('^_^');
     const [face, setFace] = useState('');
     const [desc, setDesc] = useState('');
     function Toggle() {
         if (show == 'open') {
             setShow('close');
+            setButtonText('^_^');
         }
         else {
             setShow('open');
+            setButtonText('x');
         }
     }
     function addDrop(e) {
@@ -85,12 +88,14 @@ function Feedback() {
     function handleSubmit() {
         console.log('desc = ', desc);
         console.log('face = ', face);
+        window.location.reload(false);
     }
     return (
         <Main>
             <div className={show}>
                 <center>   How was your experience?
-                <form>
+                <form method="POST" target="dummyframe"
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdj8RWeVYsSg_N4EMp8976V2DPMIDc8jLNib_WQyw0j41OVSw/formResponse">
                         <Flex>
                             <Rating type="button" onClick={e => { addDrop('hate') }}> &#128544; </Rating>
                             <Rating type="button" onClick={e => { addDrop('dislike') }}> &#128577; </Rating>
@@ -99,13 +104,15 @@ function Feedback() {
                             <Rating type="button" onClick={e => { addDrop('love') }}> &#128525; </Rating>
                         </Flex>
                         <Hide className={drop}>
-                            <Input onChange={e => setDesc(e.target.value)} type="text" placeholder="Describe your experience..." /><br /><br />
+                            <Input name="entry.1598168998" onChange={e => setDesc(e.target.value)} type="text" placeholder="Describe your experience..." /><br /><br />
                             <Send onClick={handleSubmit} type="submit" value="Send" />
                         </Hide>
+                        <input style={{ 'visibility': 'hidden' }} name="entry.2070789961" value={face} />
+                        <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
                     </form>
                 </center>
             </div><br />
-            <Flex><Triangle> </Triangle> <Button onClick={Toggle}> ^_^ </Button></Flex>
+            <Flex><Triangle> </Triangle> <Button onClick={Toggle}> {buttonText} </Button></Flex>
         </Main>
     )
 }
