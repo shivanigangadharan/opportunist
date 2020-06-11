@@ -26,10 +26,10 @@ const Select = styled.select`
     }
     `
 
-
 function Search() {
     const [gender, setGender] = useState('Select');
     const [education, setEducation] = useState();
+
     return (
         <Box>
             <center>
