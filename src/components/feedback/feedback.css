@@ -6,6 +6,7 @@
     animation-duration: 0.5s;
     box-shadow: 0px 0px 40px 1px rgba(128, 128, 128, 0.685);
 }
+/* Animations */
 @keyframes fadein{
     from{ opacity: 0 }
     to{opacity: 1}

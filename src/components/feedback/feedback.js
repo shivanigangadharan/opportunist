@@ -7,12 +7,16 @@ const Button = styled.button`
     border: 1px solid dodgerblue;
     color: white;
     font-size: 110%;
+    box-shadow: 2px 2px 10px 1px grey;
     width: 45px;
     height: 40px;
     padding: 1px;
     border-radius: 0px 8px 8px 8px;
     z-index: 10;
     outline: none;
+    :hover{
+        box-shadow: 2px 2px 20px 1px grey;
+    }
 `
 const Main = styled.div`
 position: fixed;
@@ -112,7 +116,9 @@ function Feedback() {
                     </form>
                 </center>
             </div><br />
-            <Flex><Triangle> </Triangle> <Button onClick={Toggle}> {buttonText} </Button></Flex>
+            <Flex>
+                {/* <Triangle> </Triangle> */}
+                <Button onClick={Toggle}> {buttonText} </Button></Flex>
         </Main>
     )
 }
