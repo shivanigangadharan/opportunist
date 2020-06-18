@@ -7,10 +7,10 @@ const Item = require('../../models/Item');
 //@route GET api/items
 //@description: Gett all items
 //@access Public
-router.get('/', (req, res)=>{
+router.get('/', (req, res) => {
     Item.find()
-    .sort({date: -1})
-    .then(items=>res.json(items))
+        .sort({ date: -1 })
+        .then(items => res.json(items))
 });
 
 // @route POST api/items
@@ -18,7 +18,16 @@ router.get('/', (req, res)=>{
 // @access Public
 router.post('/', (req, res) => {
     const newItem = new Item({
-        name: req.body.name
+        name: req.body.name,
+        description: req.body.description,
+        link: req.body.link,
+        opp_type: req.body.opp_type,
+        gender: req.body.gender,
+        education: req.body.education,
+        application_start: req.body.application_start,
+        application_end: req.body.application_end,
+        location: req.body.location
+
     });
     newItem.save().then(item => res.json(item));
 });
@@ -37,3 +46,17 @@ router.delete('/:id', (req, res) => {
 
 
 module.exports = router;
+
+// {
+// 	"name": "Outreachy",
+// 	"description":"Outreachy is a paid, remote internship program. 			Outreachy's goal is to support people from groups underrepresented in tech.",
+// 	"link":"https://www.outreachy.org/",
+// 	"type":"Open-source program",
+// 	"gender": [
+// 		"Female", "Transgender", "Other"
+// 	],
+// 	"education": "12th pass",
+// 	"application_start": "",
+// 	"application_end": "",
+// 	"location":"Remote"
+// }

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../components/card';
 import styled from 'styled-components';
 import Search from '../components/search';
+import axios from 'axios';
 
 const Main = styled.div`
     background: ghostwhite;
@@ -13,7 +14,29 @@ const Main = styled.div`
 `
 
 function SearchResults(props) {
+    useEffect(() => {
+        function getData() {
+            axios.get('/api/items').then(res => {
+                const data = res.data;
+                setData(data);
+                console.log("data = ", apidata);
+            });
+
+            // console.log("gender = ", gender);
+            // console.log("education = ", education);
+            // console.log("type = ", type);
+            // console.log("country = ", country);
+            // console.log("city = ", city);
+
+        }
+    })
+
+
+
     console.log('props = ', props.location.params);
+
+    const [apidata, setData] = useState();
+
     const oppType = props.location.params.type.type;
     const oppEducation = props.location.params.type.education;
     const oppGender = props.location.params.type.gender;
@@ -23,6 +46,7 @@ function SearchResults(props) {
 
 
     return (
+
         <Main>
 
             <center>

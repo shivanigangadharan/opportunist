@@ -26,13 +26,13 @@ margin-left: 30px;
 z-index: 1;
 color: black;
 `
-const Triangle = styled.div`
-    width: 0;
-    height: 0;
-    border-top: 8px solid dodgerblue;
-    border-left: 8px solid transparent;
-    z-index: 10;
-`
+// const Triangle = styled.div`
+//     width: 0;
+//     height: 0;
+//     border-top: 8px solid dodgerblue;
+//     border-left: 8px solid transparent;
+//     z-index: 10;
+// `
 const Flex = styled.div`
     display: flex;
 `
@@ -76,7 +76,7 @@ function Feedback() {
     const [face, setFace] = useState('');
     const [desc, setDesc] = useState('');
     function Toggle() {
-        if (show == 'open') {
+        if (show === 'open') {
             setShow('close');
             setButtonText('^_^');
         }

@@ -7,9 +7,33 @@ const ItemSchema = new Schema({
         type: String,
         required: true,
     },
-    date: {
+    description: {
+        type: String
+    },
+    link: {
+        type: String,
+        required: true
+    },
+    opp_type: {
+        type: String
+    },
+    gender: {
+        type: Array
+    },
+    education: {
+        type: String
+    },
+    application_start: {
+        type: Date,
+    },
+    application_end: {
         type: Date
+    },
+    location: {
+        type: String
     }
 });
 
-module.exports = Item = mongoose.model('item', ItemSchema);
+
+//here, the first parameter in the .model() function is the name of the collection (table)
+module.exports = Item = mongoose.model('open-source programs', ItemSchema);
