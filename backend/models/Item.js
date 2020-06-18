@@ -24,10 +24,13 @@ const ItemSchema = new Schema({
         type: String
     },
     application_start: {
-        type: Date,
+        type: String,
     },
     application_end: {
-        type: Date
+        type: String
+    },
+    stipend: {
+        type: String
     },
     location: {
         type: String

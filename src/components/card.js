@@ -54,20 +54,31 @@ const Type = styled.div`
 `
 
 function Card(props) {
-    var type = props.type;
+    var otype = props.otype;
+    var name = props.name;
+    var link = props.link;
+    var description = props.description;
+    var gender = props.gender;
+    var startdate = props.application_start;
+    var enddate = props.application_end;
+    var stipend = props.stipend;
+    var education = props.education;
+    var location = props.location;
     return (
         <Main>
-            <Img src="https://pbs.twimg.com/profile_images/561419803202568194/Pjk5iqNn_400x400.png" />
+            {/* <Img src="https://pbs.twimg.com/profile_images/561419803202568194/Pjk5iqNn_400x400.png" /> */}
             <Content>
-                <Title> OUTREACHY Open source program </Title>
-                <Type> {type} </Type>
+                <Title> {name} </Title>
+                <Type> {otype} </Type>
                 <Summary>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </Summary>
-                <p><b> Target audience: </b> Females, Transgender, other under-represented groups</p>
-                <p><b> Stipend: </b> $5500 </p>
-                <p><b> Application period: </b> 03-03-2020 to 07-04-2020 </p>
-                <p><b> Link: </b> <a target="_blank" rel="noopener noreferrer" href="https://www.outreachy.org/"> https://www.outreachy.org/ </a></p>
+                    {description}                </Summary>
+                <p><b> Target gender: </b> {gender} </p>
+                <p><b> Eligibility: </b> {education} </p>
+                <p><b> Location: </b> {location} </p>
+                <p><b> Stipend: </b> {stipend} </p>
+                <p><b> Application starts: </b> {startdate} </p>
+                <p><b> Application ends: </b> {enddate} </p>
+                <p><b> Link: </b> <a target="_blank" rel="noopener noreferrer" href={link}> {link} </a></p>
             </Content>
 
         </Main>

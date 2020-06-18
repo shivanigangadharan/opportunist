@@ -14,52 +14,54 @@ const Main = styled.div`
 `
 
 function SearchResults(props) {
+
     useEffect(() => {
-        function getData() {
-            axios.get('/api/items').then(res => {
-                const data = res.data;
-                setData(data);
-                console.log("data = ", apidata);
-            });
 
-            // console.log("gender = ", gender);
-            // console.log("education = ", education);
-            // console.log("type = ", type);
-            // console.log("country = ", country);
-            // console.log("city = ", city);
-
+        const req = new XMLHttpRequest();
+        let API_URL = "/api/items";
+        req.open("GET", API_URL);
+        req.send();
+        req.onload = () => {
+            const data = req.responseText;
+            var data_received = JSON.parse(data);
+            setData(data_received);
         }
-    })
+    }, []);
+
+    const [apidata, setData] = useState('null');
+    console.log("DATA = ", apidata);
+    if (apidata === 'null') {
+        return (
+            <div> <br /><br /><br /> <h1> Loading...</h1> </div >
+        )
+    }
+    else {
+        // var oppnames = [];
+        // var opptypes = [];
+        // apidata.map((e) => {
+        //     oppnames.push(e.name);
+        //     opptypes.push(e.opp_type);
+        // })
+        return (
+
+            <Main>
+
+                <center>
+                    {
+                        apidata.map((e) => {
+                            return <Card otype={e.opp_type} name={e.name}
+                                link={e.link} description={e.description}
+                                gender={e.gender} application_start={e.application_start}
+                                application_end={e.application_end} stipend={e.stipend}
+                                education={e.education} location={e.location}
+                            />
+                        })
+                    }
 
 
-
-    console.log('props = ', props.location.params);
-
-    const [apidata, setData] = useState();
-
-    const oppType = props.location.params.type.type;
-    const oppEducation = props.location.params.type.education;
-    const oppGender = props.location.params.type.gender;
-    const oppCountry = props.location.params.type.country;
-    const oppCity = props.location.params.type.city;
-    console.log("Gender = ", oppGender);
-
-
-    return (
-
-        <Main>
-
-            <center>
-
-                <h1> hello </h1>
-                <Card type={oppType} />
-                {/* <Card type="INTERNSHIP" />
-                <Card type="COMMUNITY EVENT" /> */}
-
-
-            </center>
-        </Main>
-    )
+                </center>
+            </Main>
+        )
+    }
 }
-
 export default SearchResults;

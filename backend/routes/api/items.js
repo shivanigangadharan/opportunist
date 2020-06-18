@@ -26,8 +26,8 @@ router.post('/', (req, res) => {
         education: req.body.education,
         application_start: req.body.application_start,
         application_end: req.body.application_end,
-        location: req.body.location
-
+        location: req.body.location,
+        stipend: req.body.stipend
     });
     newItem.save().then(item => res.json(item));
 });
