@@ -8,7 +8,7 @@
     "server": "nodemon server.js",
     "client": "cd.. && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd.. && npm install cd.. && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "author": "Shivani Gangadharan",
   "license": "ISC",
