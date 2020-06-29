@@ -52,7 +52,10 @@ const Type = styled.div`
     border-radius: 100px;
     padding: 0.4%;
 `
-
+const P = styled.p`
+    display: flex;
+    flex-direction: row;
+    `
 function Card(props) {
     var otype = props.otype;
     var name = props.name;
@@ -64,6 +67,30 @@ function Card(props) {
     var stipend = props.stipend;
     var education = props.education;
     var location = props.location;
+    var one = '';
+    var two = '';
+    var three = '';
+    if (gender.length == 1) {
+        var one = gender[0]
+    }
+    else if (gender.length == 3) {
+        var one = gender[0];
+        var two = gender[1];
+        var three = gender[2];
+    }
+    function showGender() {
+        if (gender.length == 1) {
+            return (<div>{one} </div>);
+        }
+        else {
+            return (
+                <div>
+                    {one}, {two} and {three}
+                </div>
+            )
+        }
+
+    }
     return (
         <Main>
             {/* <Img src="https://pbs.twimg.com/profile_images/561419803202568194/Pjk5iqNn_400x400.png" /> */}
@@ -72,12 +99,14 @@ function Card(props) {
                 <Type> {otype} </Type>
                 <Summary>
                     {description}                </Summary>
-                <p><b> Target gender: </b> {gender} </p>
-                <p><b> Eligibility: </b> {education} </p>
-                <p><b> Location: </b> {location} </p>
-                <p><b> Stipend: </b> {stipend} </p>
-                <p><b> Application starts: </b> {startdate} </p>
-                <p><b> Application ends: </b> {enddate} </p>
+                <P><b> Target gender : &nbsp; </b>
+                    {showGender()}
+                </P>
+                <p><b> Eligibility : </b> {education} </p>
+                <p><b> Location : </b> {location} </p>
+                <p><b> Stipend : </b> {stipend} </p>
+                <p><b> Application starts : </b> {startdate} </p>
+                <p><b> Application ends : </b> {enddate} </p>
                 <p><b> Link: </b> <a target="_blank" rel="noopener noreferrer" href={link}> {link} </a></p>
             </Content>
 

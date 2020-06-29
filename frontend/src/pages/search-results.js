@@ -28,33 +28,89 @@ function SearchResults(props) {
         }
     }, []);
 
+
+    const callbackFunction = (childData) => {
+        setChildprops({
+            education: childData.education,
+            gender: childData.gender,
+            type: childData.type,
+            location: childData.location,
+            hide: childData.clicked
+        });
+    }
+
     const [apidata, setData] = useState('null');
+    const [childprops, setChildprops] = useState();
+    var [queryArray, setQueryArray] = useState([]);
+    const [hide, setHide] = useState(true);
+
+    console.log("child props = ", childprops);
+    console.log("hidden - ", hide);
     console.log("DATA = ", apidata);
+    console.log("queryArray = ", queryArray);
+
+
+
     if (apidata === 'null') {
         return (
+            //code cleansing required
             <div> <br /><br /><br /> <h1> Loading...</h1> </div >
         )
     }
     else {
-        // var oppnames = [];
-        // var opptypes = [];
-        // apidata.map((e) => {
-        //     oppnames.push(e.name);
-        //     opptypes.push(e.opp_type);
-        // })
+        if (childprops != undefined) {
+            queryArray.splice(0, queryArray.length);
+
+            {
+                apidata.map((e) => {
+
+                    // ALL FETCHING-RELATED QUERIES
+
+                    if (e.education == childprops.education &&
+                        e.opp_type == childprops.type &&
+                        e.location == childprops.location
+                    ) {
+                        if (childprops.gender == 'Male') {
+                            if (e.gender == 'Male' || e.gender == 'Everyone') {
+                                queryArray.push(e);
+                            }
+                        }
+                        else {
+                            queryArray.push(e);
+                        }
+
+                    }
+
+
+                })
+                if (queryArray.length == 0 &&
+                    childprops.education != undefined &&
+                    childprops.location != undefined &&
+                    childprops.type != undefined) {
+                    alert("Sorry, there are no opportunities currently available for the mentioned requirements.");
+                }
+            }
+
+        }
         return (
 
             <Main>
-
+                <Search parentCallback={callbackFunction} />
+                {/* code cleansing required */}
+                <br /><br />
                 <center>
                     {
-                        apidata.map((e) => {
-                            return <Card otype={e.opp_type} name={e.name}
-                                link={e.link} description={e.description}
-                                gender={e.gender} application_start={e.application_start}
-                                application_end={e.application_end} stipend={e.stipend}
-                                education={e.education} location={e.location}
-                            />
+                        queryArray.map((e) => {
+                            return (
+                                <div hidden={childprops == undefined ? true : false}>
+                                    <Card otype={e.opp_type} name={e.name}
+                                        link={e.link} description={e.description}
+                                        gender={e.gender} application_start={e.application_start}
+                                        application_end={e.application_end} stipend={e.stipend}
+                                        education={e.education} location={e.location}
+                                    />
+                                </div>
+                            )
                         })
                     }
 

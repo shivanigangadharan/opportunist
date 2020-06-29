@@ -72,7 +72,12 @@ function Homepage() {
             {/* <Collapse in={showSearch}>
                 <div id="example-collapse-text">
                     <br /> */}
-            <Search />
+            {/* <Search /> */}
+            <center>
+                <Link to="search-results">
+                    <Go> GET STARTED </Go>
+                </Link>
+            </center>
             {/* </div>
             </Collapse> */}
         </Main >
