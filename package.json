@@ -8,7 +8,7 @@
     "server": "nodemon server.js",
     "client": "cd frontend && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix client"
   },
   "author": "Shivani Gangadharan",
   "license": "ISC",
@@ -17,5 +17,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.18",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "11.5.0"
   }
 }
