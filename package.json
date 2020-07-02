@@ -7,7 +7,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "install-client": "cd frontend && npm install",
-    "build": "cd frontned && npm run build",
+    "build": "cd frontend && npm run build",
     "client": "cd frontend && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm run install-client && npm run build"
