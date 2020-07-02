@@ -6,9 +6,11 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
+    "install-client": "cd frontend && npm install",
+    "build": "cd frontned && npm run build",
     "client": "cd frontend && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "author": "Shivani Gangadharan",
   "license": "ISC",
