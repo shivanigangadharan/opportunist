@@ -74,6 +74,7 @@ function Search(props) {
                             <Select required onChange={e => { setType(e.target.value) }}>
                                 <option defaultValue>Select opportunity type</option>
                                 <option value="Internship"> Internship </option>
+                                <option value="Mentorship program"> Mentorship program </option>
                                 <option value="Open-source prog"> Open source program </option>
                                 <option value="Community event"> Community event </option>
                                 <option value="Hackathon"> Hackathon </option>

@@ -63,10 +63,10 @@ function MyNavbar() {
             <Head className="navbar-brand" href="/">OPPORTUNIST</Head>
 
             <NavRight className="justify-content-end" id="navbarNav">
-                <Links to="/suggest"> Suggest </Links>
                 <Links to="/">  About </Links>
+                <Links to="/search-results"> Search </Links>
+                <Links to="/suggest"> Suggest </Links>
                 <Links to="/">Contact</Links>
-                <Links to="/"> Feedback </Links>
             </NavRight >
 
 

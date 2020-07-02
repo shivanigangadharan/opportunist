@@ -68,7 +68,7 @@ function SearchResults(props) {
 
                     if (e.education == childprops.education &&
                         e.opp_type == childprops.type &&
-                        e.location == childprops.location
+                        (e.location == childprops.location || e.location == "Remote")
                     ) {
                         if (childprops.gender == 'Male') {
                             if (e.gender == 'Male' || e.gender == 'Everyone') {
