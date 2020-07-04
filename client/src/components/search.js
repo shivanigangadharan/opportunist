@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Box = styled.div`
     border-radius: 4px;
-    padding-top: 5vh;
+    padding-top: 3vh;
     text-align: center;
     @media screen and (max-width: 991px){
         padding-bottom: 4%;
@@ -75,7 +75,7 @@ function Search(props) {
                                 <option defaultValue>Select opportunity type</option>
                                 <option value="Internship"> Internship </option>
                                 <option value="Mentorship program"> Mentorship program </option>
-                                <option value="Open-source prog"> Open source program </option>
+                                <option value="Open-source program"> Open source program </option>
                                 <option value="Community event"> Community event </option>
                                 <option value="Hackathon"> Hackathon </option>
                             </Select>

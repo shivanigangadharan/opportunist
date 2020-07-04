@@ -1,37 +1,70 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-// import './navbar.css';
-import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom';
+import { SearchOutlined, InfoCircleOutlined, BulbOutlined, ReadOutlined } from '@ant-design/icons';
 
-const Nav = styled.nav`
-background: #2A2829;
-transition: top 0.5s;
-position: fixed;
-width: 100%;
-padding: 1.5%;
+const Nav = styled.div`
+    background: #2A2829;
+    color: white;
+    display: flex;
+    padding: 1.5%;
+    position: fixed;
+    width: 100%;
+    font-size: 120%;
+    transition: top 0.5s;
+
 `
-const Head = styled.a`
-font-size: 250%;
-font-weight: 600;
-color: white;
-:hover{
-    color: skyblue !important;
-    transition-duration:0.5s;
+const Brand = styled.div`
+font-size: 150%;
+font-weight: bold;
+margin-left: 20px;
+`
+const Expand = styled.div`
+display: none;
+@media (max-width: 768px){
+    margin-left: auto;
+    cursor: pointer;
+    display: initial;
 }
 `
+const Menu1 = styled.div`
+display: flex;
+text-align: center;
+margin-left: auto;
+@media (max-width: 768px) {
+    display: none;
+}
+`
+const Menu2 = styled.div`
+display : none;
+color: white !important;
+@media (max-width: 768px) {
+    display: flex;
+    margin-left: auto;
+    margin-top: 1%;
+}
+`
+
 const Links = styled(Link)`
 color: white !important;
-text-decoration:none !important;
+text-decoration: none !important;
 :hover{
-    color: skyblue !important;
-    transition-duration:0.5s;
+    color: lightgrey !important;
+    cursor: pointer;
 }
 `
-const NavRight = styled.div`
+const Icons = styled(Link)`
+    margin-right: 25px;
+    font-size: 120%;
     color: white !important;
-    float: right;
-    font-size: 150%;
+    :hover{
+        color: lightgrey !important;
+        cursor: pointer;
+    }
+`
+const Option = styled.div`
+margin-right: 20px;
+
 `
 
 function MyNavbar() {
@@ -57,21 +90,55 @@ function MyNavbar() {
     const [navState, setNavState] = useState('0px');
 
     return (
-        <Nav id="navbar" style={{ 'top': navState }}>
+        // <Nav id="navbar" style={{ 'top': navState }}>
 
 
-            <Head className="navbar-brand" href="/">OPPORTUNIST</Head>
+        //     <Head className="navbar-brand" href="/">OPPORTUNIST</Head>
 
-            <NavRight className="justify-content-end" id="navbarNav">
-                <Links to="/">  About </Links>
-                <Links to="/search-results"> Search </Links>
-                <Links to="/suggest"> Suggest </Links>
-                <Links to="/">Contact</Links>
-            </NavRight >
+        //     <NavRight className="justify-content-end" id="navbarNav">
+        //         <Links to="/">  About </Links>
+        //         <Links to="/search-results"> Search </Links>
+        //         <Links to="/suggest"> Suggest </Links>
+        //         <Links to="/">Contact</Links>
+        //     </NavRight >
 
 
 
-        </Nav >
+        // </Nav >
+
+
+        <Nav className="nav" id="navbar" style={{ 'top': navState }}>
+            <Brand>
+                OPPORTUNIST
+                </Brand>
+            <Menu1>
+                <Option>
+                    <Links to="/">  About </Links>
+                </Option>
+                <Option>
+                    <Links to="/search-results"> Search </Links>
+                </Option>
+                <Option>
+                    <Links to="/suggest">Suggest</Links>
+                </Option>
+                <Option>
+                    <Links to="/"> Blogs</Links>
+                </Option>
+
+            </Menu1>
+            <Menu2>
+                <Icons to="/">  <InfoCircleOutlined /> </Icons>
+                <Icons to="/search-results">   <SearchOutlined /> </Icons>
+                <Icons to="/suggest">  <BulbOutlined /></Icons>
+                <Icons to="/">  <ReadOutlined /></Icons>
+            </Menu2>
+
+
+        </Nav>
+
+
+
+
     )
 }
 export default MyNavbar;

@@ -96,7 +96,7 @@ function Card(props) {
             {/* <Img src="https://pbs.twimg.com/profile_images/561419803202568194/Pjk5iqNn_400x400.png" /> */}
             <Content>
                 <Title> {name} </Title>
-                <Type> {otype} </Type>
+                <Type> {otype.toUpperCase()} </Type>
                 <Summary>
                     {description}                </Summary>
                 <P><b> Target gender : &nbsp; </b>
