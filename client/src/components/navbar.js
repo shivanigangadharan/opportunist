@@ -2,37 +2,43 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SearchOutlined, InfoCircleOutlined, BulbOutlined, ReadOutlined } from '@ant-design/icons';
+import '../assets/logo.PNG';
 
 const Nav = styled.div`
-    background: #2A2829;
+    background: white;
     color: white;
     display: flex;
-    padding: 1.5%;
+    padding: 1%;
     position: fixed;
     width: 100%;
     font-size: 120%;
     transition: top 0.5s;
-
+    box-shadow: 0 8px 6px -6px lightgrey;
 `
 const Brand = styled.div`
 font-size: 150%;
 font-weight: bold;
-margin-left: 20px;
-`
-const Expand = styled.div`
-display: none;
-@media (max-width: 768px){
-    margin-left: auto;
-    cursor: pointer;
-    display: initial;
+margin-left: 10px;
+color: black;
+text-decoration: none !important;
+:hover{
+    text-decoration: none !important;
 }
-`
-const Menu1 = styled.div`
-display: flex;
-text-align: center;
-margin-left: auto;
 @media (max-width: 768px) {
     display: none;
+}
+`
+
+const Menu1 = styled.div`
+display: flex;
+margin-top: 0.5%;
+text-align: center;
+margin-left: auto;
+transition-duration: 0.5s;
+@media (max-width: 768px) {
+    display: none;
+    transition-duration: 0.5s;
+
 }
 `
 const Menu2 = styled.div`
@@ -46,24 +52,29 @@ color: white !important;
 `
 
 const Links = styled(Link)`
-color: white !important;
+color: black !important;
 text-decoration: none !important;
 :hover{
-    color: lightgrey !important;
+    color: grey !important;
     cursor: pointer;
 }
 `
 const Icons = styled(Link)`
     margin-right: 25px;
     font-size: 120%;
-    color: white !important;
+    color: black !important;
     :hover{
-        color: lightgrey !important;
+        color: grey !important;
         cursor: pointer;
     }
 `
 const Option = styled.div`
 margin-right: 20px;
+
+`
+const Img = styled.img`
+    width: 40px;
+    margin-left: 10px;
 
 `
 
@@ -108,9 +119,10 @@ function MyNavbar() {
 
 
         <Nav className="nav" id="navbar" style={{ 'top': navState }}>
-            <Brand>
+            <Link to="/"><Img src={require('../assets/logo.PNG')} /></Link>
+            <Link to="/"><Brand>
                 OPPORTUNIST
-                </Brand>
+                </Brand></Link>
             <Menu1>
                 <Option>
                     <Links to="/">  About </Links>
@@ -142,4 +154,20 @@ function MyNavbar() {
     )
 }
 export default MyNavbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
