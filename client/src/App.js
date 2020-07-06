@@ -7,7 +7,7 @@ import MyNavbar from './components/navbar';
 import Suggest from './components/suggest';
 import Search from './components/search';
 import Feedback from './components/feedback/feedback';
-import Fetch from './actions/fetch';
+import Blogs from './components/blogs';
 
 const Main = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -20,12 +20,12 @@ function App() {
       <BrowserRouter>
         <MyNavbar />
         <Feedback />
-        <Fetch />
         <Switch>
           <Route path="/" exact component={Homepage} />
           <Route path="/search" component={Search} />
           <Route path="/search-results" component={SearchResults} />
           <Route path="/suggest" component={Suggest} />
+          <Route path="/blogs" component={Blogs} />
         </Switch>
 
       </BrowserRouter>

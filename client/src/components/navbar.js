@@ -134,7 +134,7 @@ function MyNavbar() {
                     <Links to="/suggest">Suggest</Links>
                 </Option>
                 <Option>
-                    <Links to="/"> Blogs</Links>
+                    <Links to="/blogs"> Blogs</Links>
                 </Option>
 
             </Menu1>
@@ -142,7 +142,7 @@ function MyNavbar() {
                 <Icons to="/">  <InfoCircleOutlined /> </Icons>
                 <Icons to="/search-results">   <SearchOutlined /> </Icons>
                 <Icons to="/suggest">  <BulbOutlined /></Icons>
-                <Icons to="/">  <ReadOutlined /></Icons>
+                <Icons to="/blogs">  <ReadOutlined /></Icons>
             </Menu2>
 
 
