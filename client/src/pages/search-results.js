@@ -3,6 +3,7 @@ import Card from '../components/card';
 import styled from 'styled-components';
 import Search from '../components/search';
 import axios from 'axios';
+import '../components/search.css';
 
 const Main = styled.div`
     background: ghostwhite;
@@ -54,7 +55,7 @@ function SearchResults(props) {
     if (apidata === 'null') {
         return (
             //code cleansing required
-            <div> <br /><br /><br /> <h1> Loading...</h1> </div >
+            <div> <center> <h1 id="h1"> Loading...</h1> </center></div >
         )
     }
     else {

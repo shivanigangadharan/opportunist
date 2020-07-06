@@ -29,8 +29,18 @@ select:hover{
     color: white;
     border: rgb(4, 4, 97);
 }
-/* option{
-    padding: 0.5%;
-    border: 5px solid lightgray;
-    margin: 1%;
-} */
+
+/* SEARCH-RESULTS CSS */
+
+#h1{
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    margin-top: 35vh;
+    animation-direction: alternate;
+
+}
+@keyframes loading{
+    from{ font-size: 220%; color: rgb(8, 8, 90); }
+    to{font-size: 320%; color: rgb(15, 99, 184);}
+}
