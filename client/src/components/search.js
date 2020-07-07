@@ -4,20 +4,13 @@ import '../components/search.css';
 import { Link } from 'react-router-dom';
 
 const Box = styled.div`
-    border-radius: 4px;
     padding-top: 3vh;
-    text-align: center;
-    @media screen and (max-width: 991px){
-        padding-bottom: 4%;
-    }
-    @media screen and (max-width: 700px){
-        padding-bottom: 6%;
-    }
+
 `
 const Select = styled.select`
-    width: 30%;
+    // width: 30%;
     outline: none;
-    background: white !important;
+    // background: white !important;
     @media screen and (max-width: 991px){
         width: 40%;
     }
@@ -25,7 +18,12 @@ const Select = styled.select`
         width: 80%;
     }
     `
-
+const Img = styled.img`
+    width: 40vw;
+    @media (max-width: 700px){
+        display:none;
+    }
+`
 
 function Search(props) {
     const [gender, setGender] = useState('Select');
@@ -50,10 +48,10 @@ function Search(props) {
     }
     return (
         <Box>
-            <center>
-                <form>
-                    <div className="container">
-                        <div className="row">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-6 col-sm-12">
+                        <form>
                             <Select required onChange={e => { setEducation(e.target.value) }}>
                                 <option defaultValue>Select highest education</option>
                                 <option value="8th pass"> 8th pass </option>
@@ -81,38 +79,37 @@ function Search(props) {
                             </Select>
                             <Select required onChange={e => { setLocation(e.target.value) }}>
                                 <option defaultValue>Select Location</option>
-                                <option value="India"> Asia </option>
-                                <option value="USA"> North America </option>
-                                <option value="India"> South America </option>
-                                <option value="UK"> Europe </option>
-                                <option value="Singapore"> Africa </option>
+                                <option value="Asia"> Asia </option>
+                                <option value="North America"> North America </option>
+                                <option value="South America"> South America </option>
+                                <option value="Europe"> Europe </option>
+                                <option value="Africa"> Africa </option>
+                                <option value="Oceania"> Oceania </option>
                                 <option value="Remote"> Remote </option>
                             </Select>
-                            {/* <Select required onChange={e => { setCity(e.target.value) }}>
-                                <option defaultValue>Select city</option>
-                                <option value="Delhi"> Delhi </option>
-                                <option value="London"> London </option>
-                                <option value="Los Angeles"> Los Angeles </option>
-                                <option value="All"> All </option>
-                            </Select> */}
-                        </div>
+                            <center>
+                                <Link onClick={sendData} to={
+                                    {
+                                        pathname: '/search-results',
+                                        params: {
+                                            type: { type },
+                                            gender: { gender },
+                                            education: { education },
+                                            location: { location },
+                                            city: { city }
+                                        }
+                                    }
+                                }>
+                                    <input id="findopp" type="submit" value="Find opportunities" />
+                                </Link>
+                            </center>
+                        </form>
                     </div>
-                    <Link onClick={sendData} to={
-                        {
-                            pathname: '/search-results',
-                            params: {
-                                type: { type },
-                                gender: { gender },
-                                education: { education },
-                                location: { location },
-                                city: { city }
-                            }
-                        }
-                    }>
-                        <input id="findopp" type="submit" value="Find opportunities" />
-                    </Link>
-                </form>
-            </center>
+                    <div className="col-lg-6 col-sm-12">
+                        <Img src={require('../assets/images/search.png')} />
+                    </div>
+                </div>
+            </div>
         </Box >
     )
 }

@@ -6,8 +6,7 @@ import axios from 'axios';
 import '../components/search.css';
 
 const Main = styled.div`
-    background: ghostwhite;
-    padding-top: 10%;
+    padding-top: 8%;
     padding-bottom: 5%;
     @media screen and (max-width: 650px){
         padding-top: 15%;

@@ -9,12 +9,17 @@ select:hover{
     border: 1.2px solid rgb(4, 4, 97);
 }
 #findopp{
-    padding: 1%;
-    border: 1px solid grey;
-    border-radius: 4px;
-    background: none;
-    margin-top: 5%;
+    color: black;
+    font-size: 120%;
+    padding: 2%;
+    border: 2px solid white;
+    border-radius: 50px;
+    outline: none;
+    margin-top: 15%;
+    box-shadow: 1px 1px 3px 1px lightgrey;
+
 }
+
 @media screen and (max-width: 700px){
     #findopp{
     padding: 3%;
@@ -24,10 +29,10 @@ select:hover{
     }
 }
 #findopp:hover{
-    background: rgb(4, 4, 97);
+    /* background: rgb(4, 4, 97); */
+    background: rgb(247, 222, 84);
+    box-shadow:  3px 3px 5px 1px darkgrey;
     transition-duration: 0.5s;
-    color: white;
-    border: rgb(4, 4, 97);
 }
 
 /* SEARCH-RESULTS CSS */

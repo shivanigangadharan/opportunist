@@ -13,6 +13,7 @@ const Nav = styled.div`
     width: 100%;
     font-size: 120%;
     transition: top 0.5s;
+    z-index: 10;
     box-shadow: 0 8px 6px -6px lightgrey;
 `
 const Brand = styled.div`

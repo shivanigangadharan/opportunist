@@ -2,13 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Main = styled.div`
-    background: white;
     box-shadow: 1px 1px 1px 1px white;
     padding: 2%;
-    width: 90%;
+    width: 98%;
     border-radius: 3px;
     display: flex;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
     @media screen and (max-width: 700px){
         flex-direction: column;
         width: 95%;
@@ -18,23 +17,24 @@ const Main = styled.div`
     }
 `
 const Content = styled.div`
-    border: 1px solid skyblue;
+    border: 2px solid white;
+    width: 100%;
+    background: ghostwhite;
     border-radius: 3px;
+    box-shadow: 1px 1px 3px 1px lightgrey;
     padding: 1.3%;
     margin-left: 2%;
     text-align: left;
+    :hover{
+        box-shadow: 3px 3px 5px 1px darkgrey;
+        transition-duration: 0.5s;
+    }
     @media screen and (max-width: 700px){
         margin:0;
         padding: 2%;
     }
 `
-const Img = styled.img`
-    width: 15%;
-    @media screen and (max-width: 700px){
-        width: 50%;
-        margin-bottom: 3%;
-    }
-`
+
 const Title = styled.text`
     font-weight: bold;
 `
@@ -107,7 +107,7 @@ function Card(props) {
                 <p><b> Stipend : </b> {stipend} </p>
                 <p><b> Application starts : </b> {startdate} </p>
                 <p><b> Application ends : </b> {enddate} </p>
-                <p><b> Link: </b> <a target="_blank" rel="noopener noreferrer" href={link}> {link} </a></p>
+                <p style={{ 'display': 'inline' }}><b> Link: </b> <a target="_blank" rel="noopener noreferrer" href={link}> {name} </a></p>
             </Content>
 
         </Main>
