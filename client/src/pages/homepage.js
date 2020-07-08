@@ -3,12 +3,10 @@ import React, { useState } from 'react';
 import Search from '../components/search/search';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import About from '../components/about';
+
 
 const Main = styled.div`
-    height: 100vh;
-`
-
-const Start = styled.div`
     color: black;
     margin-top: 5vh;
     padding-top: 70px;
@@ -21,6 +19,9 @@ const Start = styled.div`
         padding-left: 5%;
         padding-right: 5%;
     }
+`
+const Welcome = styled.div`
+    height: 80vh;
 `
 const Go = styled.button`
     color: black;
@@ -50,31 +51,30 @@ function Homepage() {
 
     return (
         <Main>
-            <Start>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <h2> Missing out on amazing opportunities? Look no further. </h2>
-                            <H4> Find upcoming top-notch opportunities curated according to your eligibility, using this search tool. </H4>
-                            <H4> The opportunities are currently meant for students/graduates in any computer science related field. They include scholarships, open source programs, mentorship programs, internships and community events. </H4>
+            <Welcome className="container">
+                <div className="row">
+                    <div className="col-lg-6">
+                        <h2> Missing out on amazing opportunities? Look no further. </h2>
+                        <H4> Find upcoming top-notch opportunities curated according to your eligibility, using this search tool. </H4>
+                        <H4> The opportunities are currently meant for students/graduates in any computer science related field. They include scholarships, open source programs, mentorship programs, internships and community events. </H4>
 
-                            <center>
+                        <center>
+                            <Link to="search-results">
+                                <Go> Know more </Go>
+                            </Link> &emsp; &emsp;
                                 <Link to="search-results">
-                                    <Go> Know more </Go>
-                                </Link> &emsp; &emsp;
-                                <Link to="search-results">
-                                    <Go style={{ 'background': 'rgb(16, 134, 173)', 'color': 'white' }}> Get started </Go>
-                                </Link>
-                            </center>
-                        </div>
-                        <div className="col-lg-6">
-                            <Img src={require('../assets/images/welcome.png')} />
-                        </div>
+                                <Go style={{ 'background': 'rgb(16, 134, 173)', 'color': 'white' }}> Get started </Go>
+                            </Link>
+                        </center>
+                    </div>
+                    <div className="col-lg-6">
+                        <Img src={require('../assets/images/welcome.png')} />
                     </div>
                 </div>
+            </Welcome>
+            <About path="/#about" />
+        </Main>
 
-            </Start>
-        </Main >
     )
 }
 
