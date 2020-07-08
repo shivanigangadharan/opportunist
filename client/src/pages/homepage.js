@@ -1,6 +1,6 @@
 import Collapse from 'react-bootstrap/Collapse';
 import React, { useState } from 'react';
-import Search from '../components/search';
+import Search from '../components/search/search';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 

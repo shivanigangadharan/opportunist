@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import '../components/search.css';
+import '../search/search.css';
 import { Link } from 'react-router-dom';
 
 const Box = styled.div`
@@ -26,7 +26,7 @@ const Img = styled.img`
 `
 
 function Search(props) {
-    const [gender, setGender] = useState('Select');
+    const [gender, setGender] = useState();
     const [education, setEducation] = useState();
     const [type, setType] = useState();
     const [location, setLocation] = useState();
@@ -39,9 +39,9 @@ function Search(props) {
         if (education === undefined) {
             alert("Please fill in the education field.");
         }
-        else if (location === undefined) {
-            alert("Please select the location.");
-        }
+        // else if (location === undefined) {
+        //     alert("Please select the location.");
+        // }
         else if (type === undefined) {
             alert("Please select the opportunity type.");
         }
@@ -53,14 +53,11 @@ function Search(props) {
                     <div className="col-lg-6 col-sm-12">
                         <form>
                             <Select required onChange={e => { setEducation(e.target.value) }}>
-                                <option defaultValue>Select highest education</option>
-                                <option value="8th pass"> 8th pass </option>
-                                <option value="10th pass"> 10th pass </option>
-                                <option value="12th pass"> 12th pass </option>
+                                <option defaultValue>Select current education status*</option>
+                                <option value="High School"> High School </option>
                                 <option value="Undergraduate"> Undergraduate </option>
                                 <option value="Graduate"> Graduate </option>
-                                <option value="Post Graduate"> Post Graduate </option>
-                                <option value="Ph. D."> Ph. D. </option>
+                                <option value="Not enrolled"> Not enrolled in any educational institution </option>
                             </Select>
                             <Select required onChange={e => { setGender(e.target.value) }}>
                                 <option defaultValue>Select gender</option>
@@ -70,7 +67,7 @@ function Search(props) {
                                 <option value="Other"> Other </option>
                             </Select>
                             <Select required onChange={e => { setType(e.target.value) }}>
-                                <option defaultValue>Select opportunity type</option>
+                                <option defaultValue>Select opportunity type*</option>
                                 <option value="Internship"> Internship </option>
                                 <option value="Mentorship program"> Mentorship program </option>
                                 <option value="Open-source program"> Open source program </option>
@@ -106,7 +103,7 @@ function Search(props) {
                         </form>
                     </div>
                     <div className="col-lg-6 col-sm-12">
-                        <Img src={require('../assets/images/search.png')} />
+                        <Img src={require('../../assets/images/search.png')} />
                     </div>
                 </div>
             </div>

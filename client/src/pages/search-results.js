@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/card';
 import styled from 'styled-components';
-import Search from '../components/search';
+import Search from '../components/search/search';
 import axios from 'axios';
-import '../components/search.css';
+import '../components/search/search.css';
 
 const Main = styled.div`
     padding-top: 8%;
@@ -85,7 +85,6 @@ function SearchResults(props) {
                 })
                 if (queryArray.length == 0 &&
                     childprops.education != undefined &&
-                    childprops.location != undefined &&
                     childprops.type != undefined) {
                     alert("Sorry, there are no opportunities currently available for the mentioned requirements.");
                 }
