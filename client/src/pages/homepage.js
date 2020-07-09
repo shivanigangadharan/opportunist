@@ -57,11 +57,10 @@ function Homepage() {
                         <h2> Missing out on amazing opportunities? Look no further. </h2>
                         <H4> Find upcoming top-notch opportunities curated according to your eligibility, using this search tool. </H4>
                         <H4> The opportunities are currently meant for students/graduates in any computer science related field. They include scholarships, open source programs, mentorship programs, internships and community events. </H4>
-
                         <center>
-                            <Link to="search-results">
+                            <a href="#about">
                                 <Go> Know more </Go>
-                            </Link> &emsp; &emsp;
+                            </a> &emsp; &emsp;
                                 <Link to="search-results">
                                 <Go style={{ 'background': 'rgb(16, 134, 173)', 'color': 'white' }}> Get started </Go>
                             </Link>
@@ -72,7 +71,7 @@ function Homepage() {
                     </div>
                 </div>
             </Welcome>
-            <About path="/#about" />
+            <About id="about" />
         </Main>
 
     )

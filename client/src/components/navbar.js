@@ -126,7 +126,7 @@ function MyNavbar() {
                 </Brand></Link>
             <Menu1>
                 <Option>
-                    <Links to="/">  About </Links>
+                    <Links to="/">  Home </Links>
                 </Option>
                 <Option>
                     <Links to="/search-results"> Search </Links>
