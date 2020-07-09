@@ -21,7 +21,6 @@ const Main = styled.div`
     }
 `
 const Welcome = styled.div`
-    height: 80vh;
 `
 const Go = styled.button`
     color: black;

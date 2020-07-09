@@ -8,7 +8,7 @@ const Main = styled.div`
 const H4 = styled.h4`
     line-height: 28px;
     margin-top: 5%;
-    font-size: 120%;
+    font-size: 110%;
 `
 const Img = styled.img`
     width: 40vw;
@@ -43,21 +43,22 @@ function About() {
     return (
         <Main>
             <div className="container">
-
                 <div className="row">
 
-
-                    <div className="col-lg-6 col-sm-12 col-md-4">
+                    <div className="col-lg-6 col-sm-12">
                         <Img src={require('../assets/images/about.png')} />
                     </div>
-                    <div className="col-lg-6 col-sm-12 col-md-8">
+
+                    <div className="col-lg-6 col-sm-12">
                         <H3> Why this website? </H3>
                         <H4> The purpose behind building this project was to not let any student miss out on opportunities just because they weren't aware of it. </H4>
                         <H4> Now, the goal is to make this website a complete one stop location for all students in technology to find and participate in programs that can kick start their careers. </H4>
                     </div>
 
                 </div>
+            </div>
 
+            <div className="container">
                 <div className="row">
 
                     <div className="col-lg-6 col-sm-12 ">
@@ -71,18 +72,22 @@ function About() {
                             </Link>
                         </center>
                     </div>
+
                     <br /><br />
                     <div className="col-lg-6 col-sm-12">
                         <Img src={require('../assets/images/suggest.png')} />
                     </div>
 
                 </div>
+            </div>
 
+            <div className="container">
                 <div className="row">
 
                     <div className="col-lg-6 col-sm-12">
                         <Img src={require('../assets/images/blogs.png')} />
                     </div>
+
                     <div className="col-lg-6 col-sm-12">
                         <H3> More resources to help you reach your goal faster... </H3>
                         <H4> We have explored and curated some very informative blogs, written by previous participants who share their journey and also guide you on your applications. Do explore them to get some inside tips for a program.  </H4>
@@ -96,6 +101,7 @@ function About() {
 
                 </div>
             </div>
+
             <br /> <br /> <br /> <br />
 
         </Main >
