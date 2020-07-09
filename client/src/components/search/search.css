@@ -1,0 +1,51 @@
+select{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 0.5%;
+    width: 100%;
+    margin: 1%;
+}
+select:hover{
+    border: 1.2px solid rgb(4, 4, 97);
+}
+#findopp{
+    color: black;
+    font-size: 120%;
+    padding: 2%;
+    border: 2px solid white;
+    border-radius: 50px;
+    outline: none;
+    margin-top: 15%;
+    box-shadow: 1px 1px 3px 1px lightgrey;
+
+}
+
+@media screen and (max-width: 700px){
+    #findopp{
+    padding: 3%;
+    }
+    select{
+        padding: 1%;
+    }
+}
+#findopp:hover{
+    /* background: rgb(4, 4, 97); */
+    background: rgb(247, 222, 84);
+    box-shadow:  3px 3px 5px 1px darkgrey;
+    transition-duration: 0.5s;
+}
+
+/* SEARCH-RESULTS CSS */
+
+#h1{
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    margin-top: 35vh;
+    animation-direction: alternate;
+
+}
+@keyframes loading{
+    from{ font-size: 220%; color: rgb(8, 8, 90); }
+    to{font-size: 320%; color: rgb(15, 99, 184);}
+}

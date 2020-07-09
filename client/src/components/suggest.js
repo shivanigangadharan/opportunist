@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Main = styled.div`
     border-left: 2px solid lightgrey;
     padding-left: 3%;
-    margin-top: 22vh;
+    margin-top: 18vh;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 10vh;

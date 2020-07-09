@@ -5,8 +5,9 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import SearchResults from './pages/search-results';
 import MyNavbar from './components/navbar';
 import Suggest from './components/suggest';
-import Search from './components/search';
+import Search from './components/search/search';
 import Feedback from './components/feedback/feedback';
+import Blogs from './components/blogs';
 
 const Main = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -24,7 +25,9 @@ function App() {
           <Route path="/search" component={Search} />
           <Route path="/search-results" component={SearchResults} />
           <Route path="/suggest" component={Suggest} />
+          <Route path="/blogs" component={Blogs} />
         </Switch>
+
       </BrowserRouter>
     </Main>
   );
