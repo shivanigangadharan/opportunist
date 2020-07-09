@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Main = styled.div`
+    margin-top: 5%;
 `
 
 const H4 = styled.h4`
