@@ -65,7 +65,7 @@ function About() {
                     <div className="col-lg-6 col-sm-12 ">
                         <H3> How can you contribute? </H3>
                         <H4> If this website helps or inspires you in any way, please do your part by suggesting any top quality opportunity or program that you are aware of, so that we can grow together! </H4>
-                        <H4> You can do so by clicking the inform us button and filling a very short form with the basic required details. </H4>
+                        <H4> You can do so by clicking the Contribute button and filling a very short form with the basic required details. </H4>
                         <H4> You're small contribution will create a big impact and help many students in technology :) </H4>
                         <center>
                             <Link to="/suggest">
