@@ -35,7 +35,7 @@ const Content = styled.div`
     }
 `
 
-const Title = styled.text`
+const Name = styled.text`
     font-weight: bold;
 `
 const Summary = styled.p`
@@ -95,7 +95,7 @@ function Card(props) {
         <Main>
             {/* <Img src="https://pbs.twimg.com/profile_images/561419803202568194/Pjk5iqNn_400x400.png" /> */}
             <Content>
-                <Title> {name} </Title>
+                <Name> {name} </Name>
                 <Type> {otype.toUpperCase()} </Type>
                 <Summary>
                     {description}                </Summary>
