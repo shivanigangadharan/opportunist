@@ -8,8 +8,7 @@ import About from '../components/about';
 
 const Main = styled.div`
     color: black;
-    margin-top: 5vh;
-    padding-top: 70px;
+    margin-top: 10%;
     padding-right: 5vw;
     @media screen and (max-width: 1400px){
         padding-right: 5%;
@@ -34,6 +33,9 @@ const Go = styled.button`
     :hover{
         box-shadow: 3px 3px 5px 1px darkgrey;
         transition-duration: 0.5s;
+    }
+    @media screen and (max-width: 761px){
+        margin-top: 5%;
     }
 `
 const H4 = styled.h4`

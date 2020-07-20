@@ -19,6 +19,9 @@ const Img = styled.img`
 `
 const H3 = styled.h3`
     margin-top: 18%;
+    @media (max-width: 761px){
+        margin-top: 6%;
+    }
 `
 const Button = styled.button`
     color: black;
@@ -93,8 +96,9 @@ function About() {
                         <H3> More resources to help you reach your goal faster... </H3>
                         <H4> We have explored and curated some very informative blogs, written by previous participants who share their journey and also guide you on your applications. Do explore them to get some inside tips for a program.  </H4>
                         <H4> Also, if you have written a blog on your experience with a technical program, let us know and we'd be glad to add it to our collection!</H4>
-                        <center> <Button> Share a blog </Button> &emsp; &emsp;
-                        <Link to="/blogs">
+                        <center>
+                            {/* <Button> Share a blog </Button> &emsp; &emsp; */}
+                            <Link to="/blogs">
                                 <Button style={{ 'background': '#EE6352', 'color': 'white' }}> Explore blogs </Button>
                             </Link>
                         </center>
