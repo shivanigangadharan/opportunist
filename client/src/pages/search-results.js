@@ -96,7 +96,6 @@ function SearchResults(props) {
             <Main>
                 <Search parentCallback={callbackFunction} />
                 {/* code cleansing required */}
-                <br /><br />
                 <center>
                     {
                         queryArray.map((e) => {

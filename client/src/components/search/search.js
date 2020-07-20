@@ -48,64 +48,66 @@ function Search(props) {
     }
     return (
         <Box>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-6 col-sm-12">
-                        <form>
-                            <Select required onChange={e => { setEducation(e.target.value) }}>
-                                <option defaultValue>Select current education status*</option>
-                                <option value="High School"> High School </option>
-                                <option value="Undergraduate"> Undergraduate </option>
-                                <option value="Graduate"> Graduate </option>
-                                <option value="Not enrolled"> Not enrolled in any educational institution </option>
-                            </Select>
-                            <Select required onChange={e => { setGender(e.target.value) }}>
-                                <option defaultValue>Select gender</option>
-                                <option value="Female"> Female </option>
-                                <option value="Male"> Male </option>
-                                <option value="Transgender"> Transgender </option>
-                                <option value="Other"> Other </option>
-                            </Select>
-                            <Select required onChange={e => { setType(e.target.value) }}>
-                                <option defaultValue>Select opportunity type*</option>
-                                <option value="Scholarship"> Scholarship </option>
-                                <option value="Mentorship program"> Mentorship program </option>
-                                <option value="Open-source program"> Open source program </option>
-                                <option value="Community event"> Community event </option>
-                            </Select>
-                            <Select required onChange={e => { setLocation(e.target.value) }}>
-                                <option defaultValue>Select Location</option>
-                                <option value="Asia"> Asia </option>
-                                <option value="North America"> North America </option>
-                                <option value="South America"> South America </option>
-                                <option value="Europe"> Europe </option>
-                                <option value="Africa"> Africa </option>
-                                <option value="Oceania"> Oceania </option>
-                                <option value="Remote"> Remote </option>
-                            </Select>
-                            <center>
-                                <Link onClick={sendData} to={
-                                    {
-                                        pathname: '/search-results',
-                                        params: {
-                                            type: { type },
-                                            gender: { gender },
-                                            education: { education },
-                                            location: { location },
-                                            city: { city }
+            <center>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 col-sm-12">
+                            <form>
+                                <Select required onChange={e => { setEducation(e.target.value) }}>
+                                    <option defaultValue>Select current education status*</option>
+                                    <option value="High School"> High School </option>
+                                    <option value="Undergraduate"> Undergraduate </option>
+                                    <option value="Graduate"> Graduate </option>
+                                    <option value="Not enrolled"> Not enrolled in any educational institution </option>
+                                </Select>
+                                <Select required onChange={e => { setGender(e.target.value) }}>
+                                    <option defaultValue>Select gender</option>
+                                    <option value="Female"> Female </option>
+                                    <option value="Male"> Male </option>
+                                    <option value="Transgender"> Transgender </option>
+                                    <option value="Other"> Other </option>
+                                </Select>
+                                <Select required onChange={e => { setType(e.target.value) }}>
+                                    <option defaultValue>Select opportunity type*</option>
+                                    <option value="Scholarship"> Scholarship </option>
+                                    <option value="Mentorship program"> Mentorship program </option>
+                                    <option value="Open-source program"> Open source program </option>
+                                    <option value="Community event"> Community event </option>
+                                </Select>
+                                <Select required onChange={e => { setLocation(e.target.value) }}>
+                                    <option defaultValue>Select Location</option>
+                                    <option value="Asia"> Asia </option>
+                                    <option value="North America"> North America </option>
+                                    <option value="South America"> South America </option>
+                                    <option value="Europe"> Europe </option>
+                                    <option value="Africa"> Africa </option>
+                                    <option value="Oceania"> Oceania </option>
+                                    <option value="Remote"> Remote </option>
+                                </Select>
+                                <center>
+                                    <Link onClick={sendData} to={
+                                        {
+                                            pathname: '/search-results',
+                                            params: {
+                                                type: { type },
+                                                gender: { gender },
+                                                education: { education },
+                                                location: { location },
+                                                city: { city }
+                                            }
                                         }
-                                    }
-                                }>
-                                    <input id="findopp" type="submit" value="Find opportunities" />
-                                </Link>
-                            </center>
-                        </form>
-                    </div>
-                    <div className="col-lg-6 col-sm-12">
-                        <Img src={require('../../assets/images/search.png')} />
+                                    }>
+                                        <input id="findopp" type="submit" value="Find opportunities" />
+                                    </Link>
+                                </center>
+                            </form>
+                        </div>
+                        <div className="col-lg-6 col-sm-12">
+                            <Img src={require('../../assets/images/search.png')} />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </center>
         </Box >
     )
 }

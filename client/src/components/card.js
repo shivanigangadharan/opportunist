@@ -13,7 +13,9 @@ const Main = styled.div`
         width: 95%;
         margin-bottom: 5%;
         margin-top: 9%;
+        padding: 5%;
         padding-top: 5%;
+
     }
 `
 const Content = styled.div`
@@ -45,12 +47,17 @@ const Summary = styled.p`
     }
 `
 const Type = styled.div`
-    border: 1px solid magenta;
-    color: magenta;
+    border: 1px solid #2c0182;
+    color: #2c0182;
     float: right;
     font-size: 60%;
     border-radius: 100px;
     padding: 0.4%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    @media (max-width: 700px){
+        margin-top: 2%;
+    }
 `
 const P = styled.p`
     display: flex;
