@@ -57,7 +57,7 @@ function Homepage() {
                     <div className="col-lg-6">
                         <h2> Missing out on amazing opportunities? Look no further. </h2>
                         <H4> Find upcoming top-notch opportunities curated according to your eligibility, using this search tool. </H4>
-                        <H4> The opportunities are currently meant for students/graduates in any computer science related field. They include scholarships, open source programs, mentorship programs, internships and community events. </H4>
+                        <H4> The opportunities are currently meant for students/graduates in any computer science related field. They include scholarships, open source programs, mentorship programs, scholarships and community events. </H4>
                         <center>
                             <a href="#about">
                                 <Go> Know more </Go>
