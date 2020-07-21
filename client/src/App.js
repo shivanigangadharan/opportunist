@@ -11,6 +11,7 @@ import Blogs from './components/blogs';
 
 const Main = styled.div`
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 `
 
 function App() {

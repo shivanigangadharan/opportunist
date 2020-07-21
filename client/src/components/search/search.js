@@ -54,7 +54,7 @@ function Search(props) {
                         <div className="col-lg-6 col-sm-12">
                             <form>
                                 <Select required onChange={e => { setEducation(e.target.value) }}>
-                                    <option defaultValue>Select current education status*</option>
+                                    <option defaultValue> *Select current education status</option>
                                     <option value="High School"> High School </option>
                                     <option value="Undergraduate"> Undergraduate </option>
                                     <option value="Graduate"> Graduate </option>
@@ -68,7 +68,7 @@ function Search(props) {
                                     <option value="Other"> Other </option>
                                 </Select>
                                 <Select required onChange={e => { setType(e.target.value) }}>
-                                    <option defaultValue>Select opportunity type*</option>
+                                    <option defaultValue>*Select opportunity type</option>
                                     <option value="Scholarship"> Scholarship </option>
                                     <option value="Mentorship program"> Mentorship program </option>
                                     <option value="Open-source program"> Open source program </option>
