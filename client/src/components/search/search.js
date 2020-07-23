@@ -58,7 +58,7 @@ function Search(props) {
                                     <option value="High School"> High School </option>
                                     <option value="Undergraduate"> Undergraduate </option>
                                     <option value="Graduate"> Graduate </option>
-                                    <option value="Not enrolled"> Not enrolled in any educational institution </option>
+                                    <option value="Not enrolled"> Everyone </option>
                                 </Select>
                                 <Select required onChange={e => { setGender(e.target.value) }}>
                                     <option defaultValue>Select gender</option>

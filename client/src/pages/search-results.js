@@ -66,7 +66,7 @@ function SearchResults(props) {
 
                     // ALL FETCHING-RELATED QUERIES
 
-                    if (e.education == childprops.education &&
+                    if ((e.education == childprops.education || e.education == 'Everyone') &&
                         e.opp_type == childprops.type &&
                         (e.location == childprops.location || e.location == "Remote")
                     ) {
@@ -95,7 +95,6 @@ function SearchResults(props) {
 
             <Main>
                 <Search parentCallback={callbackFunction} />
-                {/* code cleansing required */}
                 <center>
                     {
                         queryArray.map((e) => {
