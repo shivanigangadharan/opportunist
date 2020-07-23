@@ -80,6 +80,9 @@ function Blogs() {
                     RGSOC </Card>
                 <Card href="https://medium.com/tezos-india-foundation/presenting-the-tezos-india-fellowship-%EF%B8%8F-1ad13f90b13d" target="_blank">
                     Tezos India Fellowship </Card>
+                <Card href="https://www.linuxfoundation.org/blog/2019/09/the-linux-kernel-mentorship-is-life-changing/" target="_blank">
+                    Linux Kernel Mentorship Program </Card>
+
             </CardParent>
             <br />
         </Main>
