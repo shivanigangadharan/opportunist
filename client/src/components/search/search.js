@@ -63,15 +63,15 @@ function Search(props) {
                                 <Select required onChange={e => { setGender(e.target.value) }}>
                                     <option defaultValue>Select gender</option>
                                     <option value="Female"> Female </option>
-                                    <option value="Male"> Male </option>
                                     <option value="Transgender"> Transgender </option>
+                                    <option value="Male"> Male </option>
                                     <option value="Other"> Other </option>
                                 </Select>
                                 <Select required onChange={e => { setType(e.target.value) }}>
                                     <option defaultValue>*Select opportunity type</option>
-                                    <option value="Scholarship"> Scholarship </option>
-                                    <option value="Mentorship program"> Mentorship program </option>
                                     <option value="Open-source program"> Open source program </option>
+                                    <option value="Mentorship program"> Mentorship program </option>
+                                    <option value="Scholarship"> Scholarship </option>
                                     <option value="Community event"> Community event </option>
                                 </Select>
                                 <Select required onChange={e => { setLocation(e.target.value) }}>
