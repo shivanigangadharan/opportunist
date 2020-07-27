@@ -74,7 +74,7 @@ function Card(props) {
     var stipend = props.stipend;
     var education = props.education;
     if (education == 'Everyone') {
-        education = 'Anyone can apply, check the site for more details.';
+        education = 'Anyone can apply, however, check the site if they require you to be enrolled in an educational institution.';
     }
     var location = props.location;
     var one = '';
