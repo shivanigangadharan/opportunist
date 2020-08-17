@@ -1,6 +1,6 @@
 # Opportunist | Curated opportunities in technology
 
-How often we come across exciting opportunities in technology like open source programs, mentorship programs, scholarships and much more, only to find out that we've missed the deadline! 
+How often do we come across exciting opportunities in technology like open source programs, mentorship programs, scholarships and much more, only to find out that we've missed the deadline! 
 
 Presenting Opportunist, a one stop location for all the tech enthusiasts eager to kick start their careers and participate in world class programs. All you need to do is enter some basic details, and based on that you get the list and details of all the opportunities you are eligible and can apply for. 
 
