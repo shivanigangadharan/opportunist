@@ -8,7 +8,8 @@
 # testing
 /coverage
 
-
+#keys
+/config/keys.js
 
 # misc
 .DS_Store
