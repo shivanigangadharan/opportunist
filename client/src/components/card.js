@@ -13,7 +13,9 @@ const Main = styled.div`
         width: 95%;
         margin-bottom: 5%;
         margin-top: 9%;
+        padding: 5%;
         padding-top: 5%;
+
     }
 `
 const Content = styled.div`
@@ -35,7 +37,7 @@ const Content = styled.div`
     }
 `
 
-const Title = styled.text`
+const Name = styled.text`
     font-weight: bold;
 `
 const Summary = styled.p`
@@ -45,12 +47,17 @@ const Summary = styled.p`
     }
 `
 const Type = styled.div`
-    border: 1px solid magenta;
-    color: magenta;
+    border: 1px solid #2c0182;
+    color: #2c0182;
     float: right;
     font-size: 60%;
     border-radius: 100px;
     padding: 0.4%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    @media (max-width: 700px){
+        margin-top: 2%;
+    }
 `
 const P = styled.p`
     display: flex;
@@ -66,6 +73,9 @@ function Card(props) {
     var enddate = props.application_end;
     var stipend = props.stipend;
     var education = props.education;
+    if (education == 'Everyone') {
+        education = 'Anyone can apply, however, check the site if they require you to be enrolled in an educational institution.';
+    }
     var location = props.location;
     var one = '';
     var two = '';
@@ -95,7 +105,7 @@ function Card(props) {
         <Main>
             {/* <Img src="https://pbs.twimg.com/profile_images/561419803202568194/Pjk5iqNn_400x400.png" /> */}
             <Content>
-                <Title> {name} </Title>
+                <Name> {name} </Name>
                 <Type> {otype.toUpperCase()} </Type>
                 <Summary>
                     {description}                </Summary>

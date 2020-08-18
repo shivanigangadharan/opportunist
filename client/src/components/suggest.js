@@ -4,10 +4,15 @@ import styled from 'styled-components';
 const Main = styled.div`
     border-left: 2px solid lightgrey;
     padding-left: 3%;
-    margin-top: 18vh;
+    padding-bottom: 3%;
+    margin-top: 13vh;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 10vh;
+    @media (max-width: 700px){
+        border: none;
+        margin-top: 13%;
+    }
     `
 const Select = styled.select`
     border: 1px solid lightgray;
@@ -20,6 +25,7 @@ const Select = styled.select`
     }
     @media screen and (max-width: 700px){
         width: 95%;
+        margin-bottom: 4%;
     }
 `
 const Input = styled.input`
@@ -33,9 +39,12 @@ const Input = styled.input`
     color: rgb(4, 4, 97);
     @media screen and (max-width: 830px){
         width: 75%;
+
     }
     @media screen and (max-width: 700px){
         width: 95%;
+        margin-bottom: 4%;
+        font-size: 110%;
     }
 `
 const Submit = styled.input`
@@ -51,17 +60,21 @@ margin-bottom: 2%;
     color: white;
     border: rgb(4, 4, 97);
 }
+@media (max-width: 700px){
+    margin-top: 5%;
+    padding: 2.5%;
+}
 `
 const Text = styled.text`
-    font-size: 10px;
+    font-size: 13px;
 `
 function Suggest() {
     return (
         <div>
             <Main>
-                <h2> Help others by submitting more opportunities that you're aware of. </h2>
-                <h5> Fill in this very small form below so that we can update and help more people avail such benefits. Please make sure that the opportunity you're submitting isn't already listed on this website. </h5>
-                <center> <form>
+                <h2 style={{ 'lineHeight': '40px' }}> Help others by submitting more opportunities that you're aware of. </h2>
+                <h5 style={{ 'lineHeight': '25px', 'fontSize': '110%' }}> Fill in this very short form below so that we can update and help more people avail such benefits. Please make sure that the opportunity you're submitting isn't already listed on this website. </h5>
+                <center> <form> <br />
                     <Select>
                         <option selected>Select opportunity type</option>
                         <option value="Internship"> Internship </option>

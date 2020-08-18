@@ -15,6 +15,11 @@ const Nav = styled.div`
     transition: top 0.5s;
     z-index: 10;
     box-shadow: 0 8px 6px -6px lightgrey;
+    @media (max-width: 768px){
+        padding-top: 2.5%;
+        padding-bottom: 2%;
+        }
+
 `
 const Brand = styled.div`
 font-size: 150%;
@@ -76,6 +81,9 @@ margin-right: 20px;
 const Img = styled.img`
     width: 40px;
     margin-left: 10px;
+    @media (max-width: 768px){
+        margin-left: 20px;
+    }
 
 `
 

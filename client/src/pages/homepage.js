@@ -8,8 +8,7 @@ import About from '../components/about';
 
 const Main = styled.div`
     color: black;
-    margin-top: 5vh;
-    padding-top: 70px;
+    margin-top: 10%;
     padding-right: 5vw;
     @media screen and (max-width: 1400px){
         padding-right: 5%;
@@ -35,6 +34,9 @@ const Go = styled.button`
         box-shadow: 3px 3px 5px 1px darkgrey;
         transition-duration: 0.5s;
     }
+    @media screen and (max-width: 761px){
+        margin-top: 5%;
+    }
 `
 const H4 = styled.h4`
     line-height: 30px;
@@ -55,7 +57,7 @@ function Homepage() {
                     <div className="col-lg-6">
                         <h2> Missing out on amazing opportunities? Look no further. </h2>
                         <H4> Find upcoming top-notch opportunities curated according to your eligibility, using this search tool. </H4>
-                        <H4> The opportunities are currently meant for students/graduates in any computer science related field. They include scholarships, open source programs, mentorship programs, internships and community events. </H4>
+                        <H4> The opportunities are currently meant for students/graduates in any computer science related field. They include scholarships, open source programs, mentorship programs, scholarships and community events. </H4>
                         <center>
                             <a href="#about">
                                 <Go> Know more </Go>

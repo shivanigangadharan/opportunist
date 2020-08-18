@@ -17,7 +17,12 @@ select:hover{
     outline: none;
     margin-top: 15%;
     box-shadow: 1px 1px 3px 1px lightgrey;
-
+}
+@media (max-width: 700px) {
+    #findopp{
+        padding: 1.5%;
+        font-size: 100%;
+    }
 }
 
 @media screen and (max-width: 700px){
