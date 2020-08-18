@@ -6,13 +6,16 @@ const app = express();
 
 const items = require('./routes/api/items');
 
+var dotenv = require('dotenv');
 
+dotenv.config();
 
 //body parser middleware
 app.use(express.json());
 
 //DB config
-const db = require('./config/keys').mongoURI;
+//const db = require('./config/keys').mongoURI;
+const db = require('./muri.env').mongoURI;
 
 //connect to mongodb
 mongoose
