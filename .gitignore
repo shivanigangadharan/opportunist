@@ -9,7 +9,7 @@
 /coverage
 
 #keys
-/config/keys.js
+/config
 
 # misc
 .DS_Store
