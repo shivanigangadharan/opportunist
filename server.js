@@ -6,8 +6,10 @@ const app = express();
 
 const items = require('./routes/api/items');
 
-var dotenv = require('dotenv');
-dotenv.config();
+// var dotenv = require('dotenv');
+
+// dotenv.config();
+
 
 //body parser middleware
 app.use(express.json());

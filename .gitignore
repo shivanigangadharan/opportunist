@@ -8,10 +8,8 @@
 # testing
 /coverage
 
-#keys
-/config
-
 muri.env
+
 
 # misc
 .DS_Store
