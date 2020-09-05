@@ -8,8 +8,6 @@
 # testing
 /coverage
 
-#muri.env
-
 
 # misc
 .DS_Store
