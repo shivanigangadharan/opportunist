@@ -1,15 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 
 const items = require('./routes/api/items');
 
-var dotenv = require('dotenv');
 
-dotenv.config();
-var uri = process.env.mongoURI;
+const uri = process.env.mongoURI;
 
 //body parser middleware
 app.use(express.json());
@@ -17,7 +16,8 @@ app.use(express.json());
 //DB config
 //const db = require('./config/keys').mongoURI;
 const db = require('./muri.env').mongoURI;
-
+console.log('db = ', db);
+console.log('uri = ', process.env.mongoURI);
 
 //connect to mongodb
 mongoose
