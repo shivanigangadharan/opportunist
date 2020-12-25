@@ -8,20 +8,19 @@ const app = express();
 const items = require('./routes/api/items');
 
 
-const uri = process.env.mongoURI;
+const uri = process.env.MONGODB_URI;
 
 //body parser middleware
 app.use(express.json());
 
 //DB config
-//const db = require('./config/keys').mongoURI;
-const db = require('./muri.env').mongoURI;
-console.log('db = ', db);
-console.log('uri = ', process.env.mongoURI);
+// const db = require('./muri.env').mongoURI;
+// console.log('db = ', db);
+console.log('uri == ', uri);
 
 //connect to mongodb
 mongoose
-    .connect(db, { useUnifiedTopology: true, useNewUrlParser: true })
+    .connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => console.log('MongoDB connected!'))
     .catch(err => console.log('Error:- ' + err));
 
