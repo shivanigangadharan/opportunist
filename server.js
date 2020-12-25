@@ -8,15 +8,12 @@ const app = express();
 const items = require('./routes/api/items');
 
 
-const uri = process.env.MONGODB_URI;
 
 //body parser middleware
 app.use(express.json());
 
-//DB config
-// const db = require('./muri.env').mongoURI;
-// console.log('db = ', db);
-console.log('uri == ', uri);
+//getting config vars from heroku
+const uri = process.env.MONGODB_URI;
 
 //connect to mongodb
 mongoose
