@@ -8,4 +8,4 @@ That's not all. There is also a collection of some very informative and curated 
 
 Finally, if you're interested in helping out others and making a solid impact, then you're most welcome to do so by sharing the opportunities that you're aware of, on the Suggest section. This will then be reviewed and added to our database. 
 
-Please note that this project is still in its development phase and might have some shortcomings. Everyone is encouraged to make contributions to this repository, send pull requests and help students have a better experience while using this tool. 
+Everyone is encouraged to make contributions to this repository, send pull requests and help students have a better experience while using this tool. 
