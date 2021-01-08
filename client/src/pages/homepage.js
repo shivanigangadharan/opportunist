@@ -51,8 +51,8 @@ const Img = styled.img`
 function Homepage() {
 
     return (
-        <Main>
-            <Welcome className="container">
+        <Main >
+            <Welcome id="homepage" className="container">
                 <div className="row">
                     <div className="col-lg-6">
                         <h2> Missing out on amazing opportunities? Look no further. </h2>

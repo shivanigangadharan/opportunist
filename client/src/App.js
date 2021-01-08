@@ -8,16 +8,18 @@ import Suggest from './components/suggest';
 import Search from './components/search/search';
 import Feedback from './components/feedback/feedback';
 import Blogs from './components/blogs';
+import './App.css';
 
 const Main = styled.div`
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+
 `
 
 function App() {
 
   return (
-    <Main>
+    <Main id="main">
       <BrowserRouter>
         <MyNavbar />
         <Feedback />

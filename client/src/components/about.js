@@ -45,7 +45,7 @@ const Button = styled.button`
 
 function About() {
     return (
-        <Main>
+        <Main id="about">
             <div className="container">
                 <div className="row">
 
