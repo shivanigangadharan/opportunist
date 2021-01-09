@@ -55,8 +55,8 @@ function About() {
 
                     <div className="col-lg-6 col-sm-12">
                         <H3> Why this website? </H3>
-                        <H4> The purpose behind building this project was to not let any student miss out on opportunities just because they weren't aware of it. </H4>
-                        <H4> Now, the goal is to make this website a complete one stop location for all students in technology to find and participate in programs that can kick start their careers. </H4>
+                        <H4> The purpose behind building this project was to not let any student miss out on amazing opportunities and programs just because they weren't aware of it. </H4>
+                        <H4> Now, the goal is to make this website a complete one stop location for all the students in technology to find and participate in programs that can kick start their careers. </H4>
                     </div>
 
                 </div>

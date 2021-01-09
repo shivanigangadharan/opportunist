@@ -57,17 +57,17 @@ function Blogs() {
 
         <Main>
             <h4 style={{ 'lineHeight': '28px', 'textAlign': 'justify' }}> Here are some blogs that will help you know more about the programs, their application process and experiences of previous participants.</h4>
-            <H3> Open source </H3>
+            <H3> <b>Open source</b> </H3>
             <CardParent>
                 <Card href="https://medium.com/@austintackaberry/why-you-should-contribute-to-open-source-software-right-now-bec8bd83cfc0" target="_blank">
-                    Why contribute to open source </Card>
+                    Why contribute to Open Source </Card>
                 <Card href="https://opensource.guide/how-to-contribute/" target="_blank">
                     How to contribute </Card>
                 <Card href="https://opensource.com/life/16/1/6-beginner-open-source" target="_blank">
-                    Starting points for beginners
+                    Starting points for Beginners
                 </Card>
                 <Card href="https://www.linuxfoundation.org/resources/open-source-guides/starting-open-source-project/" target="_blank">
-                    Launch your own project
+                    Launch your own Project
                 </Card>
             </CardParent><br />
             <H3> Application guides for programs </H3>
